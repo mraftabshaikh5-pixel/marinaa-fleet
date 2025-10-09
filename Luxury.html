@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marina Fleet - Home</title>
+
+  <!-- Bootstrap & AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP CDN -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+
+<style>
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .swiper-slide {
+    background: #fff;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+  /* Hover effect */
+  .swiper-slide:hover img {
+    transform: scale(1.08);
+  }
+  .swiper-slide:hover {
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
+  }
+</style>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg py-3" style="background: linear-gradient(to right, #e6eef5, #244a6f);">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+  <img src="assets/image/logo (2).png" alt="Marina Fleet Logo" width="120" height="auto">
+</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Categories 
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="luxury.html">Luxury</a></li>
+            <li><a class="dropdown-item" href="sailing.html">Sailing</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="fishing.html">Fishing</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Contact Button -->
+<a href="#" class="btn text-light rounded-5" 
+   style="background-color: #244a6f;" 
+   data-bs-toggle="modal" data-bs-target="#contactModal">
+  Contact Us
+</a>
+
+<!-- 🌟 Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow-lg">
+      
+      <!-- Header -->
+      <div class="modal-header" style="background:#244a6f; color:#fff;">
+        <h5 class="modal-title fw-bold">Get in Touch</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body p-4">
+        
+        <!-- Success Alert (Hidden by default) -->
+        <div id="successAlert" class="alert alert-success d-none rounded-3" role="alert">
+          ✅ Your message has been sent successfully!
+        </div>
+
+        <form id="contactForm">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Full Name</label>
+            <input type="text" class="form-control rounded-3" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email</label>
+            <input type="email" class="form-control rounded-3" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Message</label>
+            <textarea class="form-control rounded-3" rows="4" placeholder="Write your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn w-100 text-light rounded-3" style="background:#244a6f;">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</nav>
+<!-- navbar end -->
+
+<!-- hero section -->
+<section class="hero pb-5" style="background: linear-gradient(to right, #e6eef5, #244a6f);">
+
+<div class="container mb-0">
+  <div class="row align-items-center">
+    <div class="col-lg-6 my-5" style="color: #244a6f; font-size: 4rem; font-weight: bold; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+      <p>Enjoye With Marina Fleet<p>
+      <h2>Luxury Yachts...</h2>
+    </div>
+  
+    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="20000">
+      <img src="assets/image/LXURY HERO IMAGE.png" alt="" id="f-img">
+    </div>
+  </div>
+</div>
+</section>
+<!-- MODAL FORM -->
+  <div class="modal fade" id="contactCard" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content shadow-lg rounded-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-control" placeholder="Enter name">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="email" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="3" placeholder="Write your message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<h2 class=" mx-5 text-center my-5">Experience Timeless Luxury</h2>
+
+
+  <section class="hero-section my-5 container">
+
+  <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+      
+      <div class="col">
+        <div class="card shadow">
+          <img src="assets/image/screnity.jpg" class="card-img-top" alt="Serenity">
+          <div class="card-body">
+            <h5 class="card-title">SERENITY</h5>
+            <p class="card-text">$675.00</p>
+            <p class="card-text">⭐️⭐️⭐️⭐️</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col">
+        <div class="card shadow">
+          <img src="assets/image/CARPE DIEM.jpg" class="card-img-top" alt="Carpe Diem">
+          <div class="card-body">
+            <h5 class="card-title">CARPE DIEM</h5>
+            <p class="card-text">$475.00</p>
+            <p class="card-text">⭐️⭐️⭐️</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col">
+        <div class="card shadow">
+          <img src="assets/image/my way.jpg" class="card-img-top" alt="My Way">
+          <div class="card-body">
+            <h5 class="card-title">MY WAY</h5>
+            <p class="card-text">$575.00</p>
+            <p class="card-text">⭐️⭐️⭐️⭐️</p>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col">
+        <div class="card shadow">
+          <img src="assets/image/andiamo.jpg" class="card-img-top" alt="Andiamo">
+          <div class="card-body">
+            <h5 class="card-title">ANDIAMO</h5>
+            <p class="card-text">$800.00</p>
+            <p class="card-text">⭐️⭐️⭐️⭐️</p>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col">
+        <div class="card shadow">
+          <img src="assets/image/destiny.jpg" class="card-img-top" alt="Destiny">
+          <div class="card-body">
+            <h5 class="card-title">DESTINY</h5>
+            <p class="card-text">$500.00</p>
+            <p class="card-text">⭐️⭐️⭐️⭐️</p>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col">
+        <div class="card shadow">
+          <img src="assets/image/ENDLESS SUMMER.jpg" class="card-img-top" alt="Endless Summer">
+          <div class="card-body">
+            <h5 class="card-title">ENDLESS SUMMER</h5>
+            <p class="card-text">$650.00</p>
+            <p class="card-text">⭐️⭐️⭐️</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col">
+        <div class="card shadow">
+          <img src="assets/image/BLUE MOON.jpg" class="card-img-top" alt="Serenity">
+          <div class="card-body">
+            <h5 class="card-title">BLUE MOON</h5>
+            <p class="card-text">$675.00</p>
+            <p class="card-text">⭐️⭐️⭐️⭐️</p>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col">
+        <div class="card shadow">
+          <img src="assets/image/AMURA.jpg" class="card-img-top" alt="Carpe Diem">
+          <div class="card-body">
+            <h5 class="card-title">AMURA</h5>
+            <p class="card-text">$475.00</p>
+            <p class="card-text">⭐️⭐️⭐️</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col">
+        <div class="card shadow">
+          <img src="assets/image/ANTISAN.jpg" class="card-img-top" alt="My Way">
+          <div class="card-body">
+            <h5 class="card-title">ANTISAN</h5>
+            <p class="card-text">$575.00</p>
+            <p class="card-text">⭐️⭐️⭐️⭐️</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </section>
+
+
+<!-- 🌟 Signature Collection Section -->
+<section class="popular-products py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold text-uppercase" style="color:#244a6f;">
+      Our Signature Collection
+    </h2>
+    <p class="text-center text-muted mb-5">
+      Handpicked yachts designed for elegance, comfort & unforgettable journeys.
+    </p>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/image/LUX 3.jpg" alt="Luxury Yacht 1"></div>
+        <div class="swiper-slide"><img src="assets/image/LUX4.jpg" alt="Luxury Yacht 2"></div>
+        <div class="swiper-slide"><img src="assets/image/POPULAR.jpg" alt="Luxury Yacht 3"></div>
+        <div class="swiper-slide"><img src="assets/image/LUX 5.jpg" alt="Luxury Yacht 4"></div>
+        <div class="swiper-slide"><img src="assets/image/LUX6.jpg" alt="Luxury Yacht 5"></div>
+        <div class="swiper-slide"><img src="assets/image/Fishing-boat.jpg" alt="Luxury Yacht 6"></div>
+      </div>
+      <!-- Pagination & Navigation -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+<!-- swiiper section end -->
+
+
+ <!-- 🌊 Footer -->
+<footer class="footer text-light pt-5" style="background: linear-gradient(to right, #244a6f, #0d1b2a);">
+  <div class="container">
+    <div class="row">
+
+      <!-- About -->
+      <div class="col-md-4 mb-4 text-center text-md-start">
+        <h5 class="fw-bold mb-3">About Marina Fleet</h5>
+        <p style="font-size: 0.95rem; line-height:1.7;">
+          Marina Fleet offers luxury yachts, sailing adventures, and premium fishing experiences. 
+          Step aboard and make memories that last a lifetime across the world’s most stunning destinations.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 mb-4 text-center text-md-start">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#pricing" class="footer-link">Pricing</a></li>
+          <li><a href="#gallery" class="footer-link">Gallery</a></li>
+          <li><a href="#destination" class="footer-link">Destinations</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3 mb-4 text-center text-md-start">
+        <h5 class="fw-bold mb-3">Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill me-2"></i> Marina Bay, Dubai</p>
+        <p><i class="bi bi-telephone-fill me-2"></i> +971 123 456 789</p>
+        <p><i class="bi bi-envelope-fill me-2"></i> info@marinafleet.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-3 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Follow Us</h5>
+        <div class="d-flex gap-3 justify-content-center">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <hr class="border-light">
+
+    <!-- Bottom -->
+    <div class="w-100 text-center py-3" style="font-size: 0.9rem;">
+      © 2025 <strong>Marina Fleet</strong>. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
+ <!-- Swiper JS (must include before your script) -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  // Form Submit with Alert
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault(); // Stop actual submit
+
+    let alertBox = document.getElementById("successAlert");
+    alertBox.classList.remove("d-none");  // Show alert
+
+    // Auto hide alert after 3s
+    setTimeout(() => {
+      alertBox.classList.add("d-none");
+    }, 3000);
+
+    // Optionally clear form
+    this.reset();
+  });
+
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow", // options: "flip", "cube", "fade", "coverflow"
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 40,      // slide rotation angle
+      stretch: 0,      // spacing between slides
+      depth: 150,      // 3D depth
+      modifier: 1,     // effect multiplier
+      slideShadows: true,
+    },
+    loop: true,
+    autoplay: {
+      delay: 2500,     // auto slide delay
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    speed: 800, // transition speed (ms)
+  });
+</script>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- AOS Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    
+  AOS.init();
+</script>
+<script>AOS.init();</script>
+</body>
+</html>

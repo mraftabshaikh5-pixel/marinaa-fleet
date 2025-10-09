@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marina Fleet - Home</title>
+
+  <!-- Bootstrap & AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg py-3" style="background: linear-gradient(to right, #e6eef5, #244a6f);">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+  <img src="assets/image/logo (2).png" alt="Marina Fleet Logo" width="120" height="auto">
+</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav m-auto">
+      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Categories 
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="luxury.html">Luxury</a></li>
+            <li><a class="dropdown-item" href="sailing.html">Sailing</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="fishing.html">Fishing</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Contact Button -->
+<a href="#" class="btn text-light rounded-5" 
+   style="background-color: #244a6f;" 
+   data-bs-toggle="modal" data-bs-target="#contactModal">
+  Contact Us
+</a>
+
+<!-- 🌟 Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow-lg">
+      
+      <!-- Header -->
+      <div class="modal-header" style="background:#244a6f; color:#fff;">
+        <h5 class="modal-title fw-bold">Get in Touch</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body p-4">
+        
+        <!-- Success Alert (Hidden by default) -->
+        <div id="successAlert" class="alert alert-success d-none rounded-3" role="alert">
+          ✅ Your message has been sent successfully!
+        </div>
+
+        <form id="contactForm">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Full Name</label>
+            <input type="text" class="form-control rounded-3" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email</label>
+            <input type="email" class="form-control rounded-3" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Message</label>
+            <textarea class="form-control rounded-3" rows="4" placeholder="Write your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn w-100 text-light rounded-3" style="background:#244a6f;">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</nav>
+<!-- navbar end -->
+  <!-- 🌊 Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <h1>Enjoy With Fishing</h1>
+        <p>Memorable Experience & Discover New Boats...!</p>
+        <button class="btn btn-lg text-light rounded-5 mt-2" 
+                style="background:#244a6f; " 
+                data-bs-toggle="modal" data-bs-target="#sailingModal">
+          Book Now
+        </button>
+      </div>
+      <div class="col-lg-6 text-center" data-aos="fade-left">
+        <img src="assets/image/luxury-yacht-majestic-white-vessel-open-waters.png" alt="Yacht">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🌟 fishing Modal -->
+<div class="modal fade" id="sailingModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow-lg">
+      
+      <!-- Header -->
+      <div class="modal-header" style="background:#244a6f; color:#fff;">
+        <h5 class="modal-title fw-bold">Book Your Fishing Experience</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body p-4">
+        <form onsubmit="event.preventDefault(); alert('🎉 Booking Confirmed!');">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Full Name</label>
+            <input type="text" class="form-control rounded-3" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email</label>
+            <input type="email" class="form-control rounded-3" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Date</label>
+            <input type="date" class="form-control rounded-3" required>
+          </div>
+          <button type="submit" class="btn w-100 text-light rounded-3" style="background:#244a6f;">
+            Confirm Booking
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- sailing modal end -->
+<!-- filters left side -->
+<div class="container-fluid mt-5">
+  <div class="row">
+    <!-- Sidebar Filters -->
+    <div class="col-md-3 filters">
+      <h6>OCCASION</h6>
+      <div><input type="checkbox" class="filter" value="Fishing"> Fishing</div>
+      <div><input type="checkbox" class="filter" value="Luxury"> Luxury</div>
+      <div><input type="checkbox" class="filter" value="Wedding"> Wedding</div>
+      <div><input type="checkbox" class="filter" value="Sailing"> Sailing</div>
+
+      <h6>DISCOUNT</h6>
+      <div><input type="checkbox" class="filter" value="10"> 10% or More</div>
+      <div><input type="checkbox" class="filter" value="20"> 20% or More</div>
+      <div><input type="checkbox" class="filter" value="30"> 30% or More</div>
+      <div><input type="checkbox" class="filter" value="50"> 50% or More</div>
+
+      <h6>CUSTOMER REVIEW</h6>
+      <div><input type="checkbox" class="filter" value="5"> ★★★★★ 5.0</div>
+      <div><input type="checkbox" class="filter" value="4"> ★★★★☆ 4.0</div>
+      <div><input type="checkbox" class="filter" value="3.5"> ★★★☆☆ 3.5</div>
+    </div>
+    <!-- filters left side end -->
+
+    <!-- Products Grid section -->
+    <div class="col-md-9">
+      <h2 class="text-center mb-4">Our Fishing Collection</h2>
+      <p class="text-center mb-3"> Experience the joy of fishing with comfort, stability & style on every trip..</p>
+      <div class="row" id="product-list">
+
+        <!-- 12 Product Cards -->
+        <div class="col-md-4 mb-4 product" data-category="Luxury" data-discount="10" data-rating="4">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/second wind.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>GONE FISHING</h5>
+              <div class="price">$675.00</div>
+              <div class="star-rating">★★★★☆</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Fishing" data-discount="20" data-rating="5">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/screnity sailing.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>SERENITY</h5>
+              <div class="price">$475.00</div>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Sailing" data-discount="30" data-rating="3.5">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/wind dancer.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>WIND DANCER</h5>
+              <div class="price">$575.00</div>
+              <div class="star-rating">★★★☆☆</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Wedding" data-discount="50" data-rating="5">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/orion.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>ORION</h5>
+              <div class="price">$775.00</div>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Luxury" data-discount="30" data-rating="4">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/wind song.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>WINDSONG</h5>
+              <div class="price">$525.00</div>
+              <div class="star-rating">★★★★☆</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Sailing" data-discount="20" data-rating="5">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/whisper.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>WHISPER</h5>
+              <div class="price">$595.00</div>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Fishing" data-discount="50" data-rating="3.5">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/escape.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>ESCAPE</h5>
+              <div class="price">$675.00</div>
+              <div class="star-rating">★★★☆☆</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Luxury" data-discount="10" data-rating="4">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/CARPE DIEM.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>CARPE DIEM</h5>
+              <div class="price">$875.00</div>
+              <div class="star-rating">★★★★☆</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Wedding" data-discount="20" data-rating="5">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/MULTIHULLS.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>MULTIHULLS</h5>
+              <div class="price">$825.00</div>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Sailing" data-discount="10" data-rating="4">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/MARINA.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>MARINA</h5>
+              <div class="price">$475.00</div>
+              <div class="star-rating">★★★★☆</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Fishing" data-discount="30" data-rating="5">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/VOYAGER.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>VOYAGER</h5>
+              <div class="price">$575.00</div>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 product" data-category="Wedding" data-discount="50" data-rating="3.5">
+          <div class="product-card">
+            <span class="badge-new">NEW</span>
+            <img src="assets/image/OCEAN STAR.jpg" alt="Boat">
+            <div class="p-3">
+              <h5>OCEAN STAR</h5>
+              <div class="price">$775.00</div>
+              <div class="star-rating">★★★☆☆</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+ 
+
+
+ <!-- 🌊 Footer -->
+<footer class="footer text-light pt-5" style="background: linear-gradient(to right, #244a6f, #0d1b2a);">
+  <div class="container">
+    <div class="row">
+
+      <!-- About -->
+      <div class="col-md-4 mb-4 text-center text-md-start">
+        <h5 class="fw-bold mb-3">About Marina Fleet</h5>
+        <p style="font-size: 0.95rem; line-height:1.7;">
+          Marina Fleet offers luxury yachts, sailing adventures, and premium fishing experiences. 
+          Step aboard and make memories that last a lifetime across the world’s most stunning destinations.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 mb-4 text-center text-md-start">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#pricing" class="footer-link">Pricing</a></li>
+          <li><a href="#gallery" class="footer-link">Gallery</a></li>
+          <li><a href="#destination" class="footer-link">Destinations</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3 mb-4 text-center text-md-start">
+        <h5 class="fw-bold mb-3">Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill me-2"></i> Marina Bay, Dubai</p>
+        <p><i class="bi bi-telephone-fill me-2"></i> +971 123 456 789</p>
+        <p><i class="bi bi-envelope-fill me-2"></i> info@marinafleet.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-3 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Follow Us</h5>
+        <div class="d-flex gap-3 justify-content-center">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <hr class="border-light">
+
+    <!-- Bottom -->
+    <div class="w-100 text-center py-3" style="font-size: 0.9rem;">
+      © 2025 <strong>Marina Fleet</strong>. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script>
+  // Form Submit with Alert
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault(); // Stop actual submit
+
+    let alertBox = document.getElementById("successAlert");
+    alertBox.classList.remove("d-none");  // Show alert
+
+    // Auto hide alert after 3s
+    setTimeout(() => {
+      alertBox.classList.add("d-none");
+    }, 3000);
+
+    // Optionally clear form
+    this.reset();
+  });
+   const filters = document.querySelectorAll('.filter');
+  const products = document.querySelectorAll('.product');
+
+  filters.forEach(filter => {
+    filter.addEventListener('change', () => {
+      let activeFilters = Array.from(filters)
+        .filter(f => f.checked)
+        .map(f => f.value);
+
+      products.forEach(product => {
+        let matches = activeFilters.every(f =>
+          product.dataset.category === f ||
+          product.dataset.discount === f ||
+          product.dataset.rating === f
+        );
+
+        if (activeFilters.length === 0 || matches) {
+          product.style.display = "block";
+          product.classList.add("animate__animated", "animate__fadeIn");
+        } else {
+          product.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- AOS Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>AOS.init();</script>
+</body>
+</html>
